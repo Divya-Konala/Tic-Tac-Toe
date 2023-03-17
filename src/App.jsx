@@ -47,7 +47,9 @@ function App() {
 
   //onChange
   function handleClick(index){
-    if(gameArr[index]===""){
+    if(winner!==""){
+      toast("Winner Already Declared")
+    }else if(gameArr[index]===""){
       setNoOfClicks(noOfClicks+1)
       gameArr[index]=(isCross)?"cross":"circle";
       setCross(!isCross);
